@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    image: 'mongo'
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./data/db:/data/db
+
+    # command: redis-server --requirepass my_redis_secret
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+        - redis
