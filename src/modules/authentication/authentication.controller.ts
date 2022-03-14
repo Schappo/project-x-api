@@ -1,5 +1,5 @@
 import { UserLogin } from 'src/shared/types'
-import Auth from '../../shared/decorators/authentication.decrator'
+import Auth from '../../shared/decorators/authentication/authentication.decrator'
 import Controller from '../../shared/decorators/http/controller.decorator'
 import { Post } from '../../shared/decorators/http/http-method.decorator'
 import { Body, Headers } from '../../shared/decorators/http/request-properties.decorator'

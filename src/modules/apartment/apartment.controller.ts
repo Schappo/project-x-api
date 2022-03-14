@@ -1,4 +1,4 @@
-import Auth from '../../shared/decorators/authentication.decrator'
+import Auth from '../../shared/decorators/authentication/authentication.decrator'
 import Controller from '../../shared/decorators/http/controller.decorator'
 import { Delete, Get, Post, Put } from '../../shared/decorators/http/http-method.decorator'
 import { Body, Params } from '../../shared/decorators/http/request-properties.decorator'
